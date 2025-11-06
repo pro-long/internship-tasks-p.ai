@@ -52,7 +52,7 @@ python task3.py --input sample.pdf --test_mode
 - **Response Format**: Assumes Gemini returns properly formatted text/JSON
 
 ## Outut:
-![output_task3.png](./output_img/output_task3.png)
+![output_task3.png](../output_img/output_task3.png)
 
 ## Refrences
 API docs:

@@ -30,12 +30,12 @@ python task3.py
 
 ## Ouput
 Endpoint: ```/api/price-gap-pair```
-![output_task2-1.png](./output_img/output_task2-1.png)
+![output_task2-1.png](../output_img/output_task2-1.png)
 
 
 Endpoint: ```/api/price-gap-pair```
-![output_task2-2.png](./output_img/output_task2-2.png)
-![output_task2-3.png](./output_img/output_task2-3.png)
+![output_task2-2.png](../output_img/output_task2-2.png)
+![output_task2-3.png](../output_img/output_task2-3.png)
 
 ## References
 Chat GPT: inplementation of a ```/api/price-gap-pair``` endpoint using its api
