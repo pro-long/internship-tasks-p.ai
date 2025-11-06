@@ -31,17 +31,17 @@ you can create API key from [here](https://ai.google.dev/gemini-api/docs/api-key
 ### 4. How to Run
 Image and PDF support (locally and URL)
 ```bash
-python task3.py --input sample.pdf
+python main.py --input sample.pdf
 ```
 ```bash
-python task3.py --input sample.jpeg
+python main.py --input sample.jpeg
 ```
 ```bash
-python task3.py --input https://example.com/w2_doc.png
+python main.py --input https://example.com/w2_doc.png
 ```
 Test mode does not calls the actual API and gives hardcoded output
 ```bash
-python task3.py --input sample.pdf --test_mode
+python main.py --input sample.pdf --test_mode
 ```
 
 ## Limitations

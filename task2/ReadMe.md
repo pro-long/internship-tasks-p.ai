@@ -23,7 +23,7 @@ you can create API key from [here](https://developer.themoviedb.org/docs/getting
 ### 4. Run the script
 - Run API
 ```bash
-python task3.py
+python main.py
 ```
 - Server will start at:
 ```http://localhost:5000```
