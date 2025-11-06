@@ -1,0 +1,11 @@
+You are reading a W-2 tax form data extracted as JSON.
+Generate concise insights based on the extracted JSON and the address.
+List each insight, address sanity checks, multi-state detection, federal and state tax heuristics, social security and medicare cap checks, wage consistency findings, potential follow-ups etc. Output each insight as a plain sentence (no bullets, no asterisks).
+Instructions:
+- Do NOT use markdown, formatting symbols, or code fences in your answer.
+- Use strictly:
+  - `<plain sentences>`
+- Mask SSN/EIN so only the last 4 digits appear (XXX-XX-1234 or XX-XXXX1234).
+- Address normalization: uppercase state codes, trim fields.
+- Insights should be compact, actionable, and relevant to the address and extracted income/tax fields.
+- If no issues or insights are found, respond with "No significant insights found."

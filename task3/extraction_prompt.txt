@@ -1,0 +1,57 @@
+You are reading a W-2 tax form (PDF or image) and need to:
+Extract all key data fields into a valid JSON object.  
+Your output MUST use this structure, with no markdown or formatting symbols or \n
+The response should be in strict json format and nothing else.
+
+{
+  "employee": {
+    "name": {"first": "...", "last": "..."},
+    "address": {"street": "...", "city": "...", "state": "...", "zip": "..."},
+    "masked_ssn": "XXX-XX-1234"
+  },
+  "employer": {
+    "name": "...",
+    "address": {"street": "...", "city": "...", "state": "...", "zip": "..."},
+    "masked_ein": "XX-XXXX1234"
+  },
+  "federal_boxes": {
+    "1_wages_tips_other_comp": ...,
+    "2_federal_income_tax_withheld": ...,
+    "3_social_security_wages": ...,
+    "4_social_security_tax_withheld": ...,
+    "5_medicare_wages_tips": ...,
+    "6_medicare_tax_withheld": ...,
+    // ...etc. (boxes 7-14, fill with nulls if absent)
+  },
+  "other_boxes": {
+    "control_number": "...",
+    "box_12": [ ],
+    "box_13": {
+      "statutory_employee": false,
+      "retirement_plan": false,
+      "third_party_sick_pay": false
+    },
+    "box_14": [ ]
+  },
+  "state_local": {
+    "states": [
+      {
+        "code": "...",
+        "employer_id": "...",
+        "wages": ...,
+        "income_tax": ...
+      }
+    ],
+    "localities": [ ]
+  },
+    "quality": [here include notes on Rotated/low-quality scans; multi-page W-2; duplicate box labels; Multiple state/local entries.]
+}
+
+
+Instructions:
+- Do NOT use markdown, formatting symbols, or code fences in your answer.
+- Use strictly:
+  - `json: <valid_JSON_object>`
+- If a field is missing or unreadable, set its value to null and add a short note in an additional "quality" field or include in insite.
+- Mask SSN/EIN so only the last 4 digits appear (XXX-XX-1234 or XX-XXXX1234).
+- Address normalization: uppercase state codes, trim fields.
